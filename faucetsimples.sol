@@ -13,8 +13,6 @@ contract Aluguel {
     mapping(address=>uint8) public atribuicoes;
     uint8 valorASerAtribuido;
     
-
-
     function atribuirValor() public returns (uint256) {
         require(ultimaAtribuicao[msg.sender]+100 <= block.timestamp, "Sinto muito. Voce ja usou o faucet");
         require(valorASerAtribuido < 256, "Sinto muito. Voce perdeu sua chance");
